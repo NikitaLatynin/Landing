@@ -1,0 +1,430 @@
+/*-----------------Normalize file----------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+
+*,*::before, *::after {
+	box-sizing: border-box;
+}
+
+/*--------------------Head+Secion1-----------------*/
+body {
+	font-family: san-serif;
+	font-size: 20px;
+	line-height: 25px;
+	color:#333333;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.head {
+	background-image: url(../images/header-section1-back.jpg);
+	background-size: cover;
+	background-position: bottom;
+	color: #fefefe;
+	
+}
+
+.header-site {
+	padding-top: 25px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-family: 'Open Sans';
+	font-size: 15px;
+	letter-spacing: 0.3em;
+	font-weight: 300;
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	justify-content: space-between;
+	text-transform: uppercase;
+}
+
+.logo p {
+	border-bottom: 1px white solid;		
+}
+
+.navigation {
+	padding-top: 9px;
+
+}
+
+.navigation nav {
+	display:flex;
+	justify-content: space-between;
+}
+
+.navigation nav a {
+	padding-right: 17.5px;
+	padding-left: 17.5px;
+	font-size: 13px;
+	text-decoration: none;
+	color: #fefefe;
+}
+
+/*----------------------------Adaptive header-------------*/	
+@media(max-width:740px) {
+	.header-site {
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+	.navigation nav {
+		flex-direction: column;
+	}
+}
+/*-------------------------------------------------------------*/
+.section-1 {
+	height: 100vh;
+	padding-top:100px;
+	padding-bottom:100px;
+	text-align: center;
+	align-items: center;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+}
+
+ .section-1 h1 {
+	font-family: 'Dosis';
+	font-weight: 400;
+	font-size: 24px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	position: absolute;
+}
+
+.section-1 h5 {
+	font-family: 'Open Sans';
+	font-size: 12px;
+	font-weight: 300;
+	position: absolute;
+	padding-right: 25px;
+}
+
+.section-1 h1+h5 {
+	margin-top:75px;
+}
+
+/*---------------------Scroll button-----------------------*/
+.scroll {
+	position: absolute;
+	left: 50%;
+	bottom: 35px;
+	width:20px;
+	height:20px;
+	border-radius:3px;
+	background-color: white;
+	color: black;
+	transform: rotate(45deg);
+	transition: 0.2s;
+}
+
+.scroll:hover {
+	transform: translateY(10px) rotate(45deg);
+	cursor: pointer;
+}
+
+.scroll i {
+	margin-left: 3px;
+	transform: rotate(-45deg);
+}
+
+/*------------------------Adaptive Section1--------------*/
+@media (min-width: 768px) {
+	.section-1  {
+		padding-top:200px;
+	padding-bottom:200px;	
+	}
+}
+ 
+@media (min-width: 992px) {
+	.section-1  {
+		padding-top:170px;
+		padding-bottom:170px;	
+	}
+}
+
+@media (min-width: 1024px) {
+	.section-1  {
+		padding-top:200px;
+		padding-bottom:200px;	
+	}
+}
+
+
+@media (min-width: 768px) {
+	.section-1 h1 {
+		font-size: 35px;
+	}
+}
+
+@media (min-width: 992px) {
+	.section-1 h1 {
+			font-size: 40px;
+			letter-spacing: 1em;
+	}
+
+}
+
+@media (min-width: 1024px) {
+	.section-1 h1 {
+			font-size: 45px;
+	}
+}
+
+@media (min-width: 768px) {
+	.section-1 h5 {
+			font-size: 17px;
+	}
+}
+ 
+@media (min-width: 992px) {
+	.section-1 h5 {
+			font-size: 19px;
+	}
+}
+
+/*---------------------------Section2---------------------*/
+.section-2 {
+	padding-top: 140px;
+}
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px; 
+}
+
+h2 {
+	font-family: 'Dosis';
+	font-weight: 400;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+}
+
+/*----------------------------Row1-------------------*/
+.col-xs-12 {
+	width:100%;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	float: left;
+}
+
+.quote blockquote {
+	font-family: 'Open Sans';
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 38px;
+}
+
+.quote blockquote+small {
+	margin-top:35px;
+}
+
+.quote small {
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 38px;
+}
+
+.quote p  {
+	font-family: 'Open Sans';
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 26px;
+}
+
+.section-2 h2 {
+	margin-bottom: 70px;
+}
+
+/*--------------------------Row2-------------------*/
+.team-member {
+	padding-top: 90px;
+	font-family: 'Dosis';
+	font-weight: 400;
+	font-size: 15px;
+	letter-spacing: 0.4em;
+	text-align: center;
+	justify-content: center;
+	text-transform: uppercase;
+	overflow: auto;
+}
+
+
+.team-member small {
+	font-size: 12px;
+}
+
+
+.team-member img {
+	width: 100%;
+	height: auto;
+}
+
+/*---------------------------Adaptive grid-----------------*/
+@media (min-width: 768px) {
+	.col-xs-12 {
+	width:50%;
+  }
+}
+
+@media (min-width: 1200px) {
+	.col-xs-12 {
+	width:33.33%;
+  }
+}
+
+/*-----------------------------Section3--------------------*/
+.section-3 {
+	margin-top: 200px;
+	margin-bottom: 100px;
+	position: relative;
+	text-align: center; 
+}
+
+
+.section-3 h2 {
+	margin-bottom: 120px;
+}
+
+/*------------------------------Row-incons-------------------------*/
+.section-3 .row-service {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	justify-content: space-around;
+	text-transform: uppercase;
+	margin-bottom: 80px;
+	flex-wrap: wrap;
+}
+
+.service {
+	padding:30px;
+}
+
+.service i {
+	font-size: 48px;
+}
+
+.service p {
+	font-size: 14px;
+	letter-spacing: 6px;
+	font-family: "Dosis";
+	text-align: center;
+}
+
+.service i+p {
+	margin-top: 30px;
+}
+
+
+
+.section-3 .col-xs-12 {
+	text-align: left;
+}
+
+/*-------------------------------Section4-------------------*/
+.section-4 {
+	background-color: #111111;
+	
+}
+
+.col-6 {
+	width:100%;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	float: left;
+}
+
+.col-6 h2 {
+	color:#fff;
+	padding-top: 100px;
+}
+
+.col-6 p {
+	font-family: 'Open Sans';
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 26px;
+	color:#ffffff;
+	word-wrap: wrap;
+	margin-bottom: 45px;
+}
+
+.col-6 a {
+	text-decoration: none;
+	font-size: 14px;
+	letter-spacing: 3px;
+	line-height: 26px;
+	text-transform: uppercase;
+	background-color:#cfcfcf;
+	color: black;
+	border-radius: 5px;
+	padding-top: 10px;
+	padding-bottom:10px;
+	padding-right:70px;
+	padding-left:70px;
+}
+
+.col-6 h2+p {
+	margin-top: 30px;
+}
+
+/*------------------------------Screen animation---------------*/
+.screen .imac {
+	overflow:hidden;
+	height:auto;
+	margin-top: 30px;
+}
+
+/*.landing img {
+	overflow:hidden;
+	top:5%;
+	left:4%;
+	right:4%;
+	height:72%;
+}
+
+/*--------------------------------Adaptive Screen-----------------*/
+@media(min-width: 748px) {
+	.col-6 {
+		width: 50%;
+	}
+}
+
+@media(min-width: 1090px) {
+	.screen .imac {
+		margin-top: -46px;
+	}
+}
+
