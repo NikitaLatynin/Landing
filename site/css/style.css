@@ -26,12 +26,40 @@ time, mark, audio, video {
 	box-sizing: border-box;
 }
 
+/*-------------------------TO TOP BUTTON------------------------*/
+.totop-button {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 20px solid #c6c6c6;
+	z-index:100;
+	transition:0.3s;
+	border-radius: 3px;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.totop-button:hover {
+	cursor: pointer;
+	border-bottom-color: #111;
+}
+
+.totop-button.show{
+	visibility: visible;
+	opacity: 1;
+}
+
 /*--------------------Head+Secion1-----------------*/
 body {
 	font-family: san-serif;
 	font-size: 20px;
 	line-height: 25px;
 	color:#333333;
+	overflow-x: hidden;
 }
 
 .clearfix:after {
@@ -83,6 +111,11 @@ body {
 	font-size: 13px;
 	text-decoration: none;
 	color: #fefefe;
+	transition: 0.3s;
+}
+
+.navigation nav a:hover{
+	font-size: 15px;
 }
 
 /*----------------------------Adaptive header-------------*/	
@@ -396,6 +429,7 @@ h2 {
 	padding-left: 40px;
 	font-family: 'Open Sans';
 	font-weight: 400;
+	transition: 0.5s;
 }
 
 .col-6 h2+p {
@@ -559,6 +593,7 @@ h2 {
 	padding-left: 40px;
 	font-family: 'Open Sans';
 	font-weight: 400;
+	transition: 0.5s;
 }
 
 .section-6 a:hover {
@@ -647,9 +682,61 @@ h2 {
 	padding-right: 15px;
 }
 
-.owl-dot.active {
-	color: #fff;
+.section-8 .owl-carousel .owl-nav .owl-prev, 
+.section-8 .owl-carousel .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #111111;
+    transition:0.2s;
 }
+
+.owl-prev {
+    left: 0;
+    transform: translate(-50%,0) rotate(45deg);
+}
+
+.owl-prev span {
+	display: block;
+	padding-left: 15px;
+	transform: rotate(-45deg);
+}
+
+.owl-next {
+    right: 0;
+    transform: translate(50%,0) rotate(-45deg);
+}
+
+.owl-next span {
+	display: block;
+	padding-right: 15px;
+	transform: rotate(45deg);
+}
+
+.owl-dots {
+	margin-top: 75px;
+}
+
+.owl-dots span {
+	display: block;
+	position: relative;
+	z-index: 2;
+	background-color: #fff;
+	margin:5px;
+	width: 8px;
+	height:8px;
+	color: #fff;
+	border-radius: 50%;
+}
+
+.owl-dots .active span {
+	background-color: #111;
+	border: 1px solid #fff;
+}
+
 
 /*----------------------------------------Adaptive Section-8-------------*/
 @media (min-width: 768px) {
@@ -663,3 +750,211 @@ h2 {
 		width:45%;
 	}
 }
+
+@media (max-width: 578px) {
+	.owl-prev,
+	.owl-next {
+		visibility: hidden;
+	}
+}
+
+/*----------------------------------------Section-11---------------------*/
+.section-11 {
+	padding-top: 140px;
+	padding-bottom: 135px;
+	text-align: center;
+}
+
+/*---------------Contact----------*/
+.section-11 .row-1 {
+	margin-bottom: 80px;
+	margin-right: 200px;
+	margin-left: 200px;
+}
+
+.contact-icon {
+	margin-top: 15px;
+	margin-right: 15px;
+	width: 25px;
+	height: 25px;
+	background-color: #111;
+	color: #fff;
+	transform: rotate(-45deg);
+	border-radius: 3px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.section-11 .col-xs-12 {
+	display: flex;
+	justify-content: center;
+}
+
+.section-11 h2 {
+	margin-bottom: 100px;
+}
+
+.contact-icon i {
+	transform: rotate(45deg);
+}
+
+.section-11 dl {
+	text-align: left;
+	font-size: 12px;
+	letter-spacing: 4px;
+	font-family: 'Dosis';
+	font-weight: 400;
+}
+
+.section-11 dt {
+	text-transform: uppercase;
+	color: #777777;
+}
+
+.section-11 dd {
+	font-family: 'OpenSans';
+	font-weight: 300;
+	font-size: 15px;
+	color: #444444;
+	letter-spacing: 2px;
+}
+
+/*-------- FORM-----------------*/
+.section-11 .row-2 {
+	margin-right: 200px;
+	margin-left: 200px;
+}
+
+.section-11 .col-6 {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+.section-11 input {
+	border: 1px solid #e6e6e6;  
+	background: #ffffff; 
+	outline: none; 
+	height: 35px; 
+	width: 375px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	letter-spacing: 2px;
+	line-height: 26px;
+	color: #ababab;
+	font-family: "Open Sans";
+	text-transform: uppercase;
+}
+
+.section-11 input+small{
+	margin-top: 20px;
+}
+
+.section-11 small {
+	font-size: 11px;
+	color: #aaaaaa;
+	font-family: "Open Sans";
+	font-weight: 400;
+}
+
+.section-11 textarea {
+	resize: none;
+	border-color: #e6e6e6;
+	width: 375px;
+	height: 80px;
+	margin-bottom: 20px;
+	font-size: 12px;
+	letter-spacing: 2px;
+	line-height: 26px;
+	color: #ababab;
+	font-family: "Open Sans";
+	text-transform: uppercase;
+}
+
+.sub-message {
+	border-color: #333333;
+	background-color: #333333;
+	width: 180px;
+	height: 35px;
+	font-size: 13px;
+	letter-spacing: 3px;
+	line-height: 26px;
+	color: #fff;
+	font-family: "Open Sans";
+	text-transform: uppercase;
+	transition: 0.2s;
+}
+
+.sub-message:hover {
+	border-color: #464040;
+	cursor: pointer;
+	background-color: #464040;
+}
+
+/*-----------------------------------------Section-12-MAP-----------------*/
+.section-12 {
+	position: relative;
+	overflow: hidden;
+}
+
+#map {
+	width: 100%;
+	height: 400px;
+}
+
+.map-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(17,17,17, 0.95);
+	transition: 0.3s;
+}
+
+.map-overlay.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.map-icon {
+	position:absolute;
+	left: 49%;
+	top: 35%;
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
+	color: #111;
+	transform: rotate(-45deg);
+	border-radius: 3px;
+	text-align: center;
+	font-size: 15px;
+
+}
+
+.map-icon i {
+	margin-left: -7.4px;
+	margin-top: 10.6px;
+	transform: rotate(45deg);
+}
+
+.map-overlay h3 {
+	font-family: 'Dosis';
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 5px;
+	color: #ffffff;
+	text-transform: uppercase;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border: 1px solid transparent;
+	transition: 0.3s;
+}
+
+.map-overlay h3:hover {
+	border-bottom-color: white;
+	cursor: pointer;
+}
+
